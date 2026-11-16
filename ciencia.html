@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência da Luz | Óptica Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .science-section {
+            background: rgba(255, 255, 255, 0.7);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .science-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        .spectrum-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .spectrum-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .spectrum-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .spectrum-table tr:hover {
+            background: rgba(0, 119, 190, 0.05);
+        }
+        .color-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+            border: 1px solid #333;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(0, 119, 190, 0.1));
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px dashed var(--secondary-color);
+        }
+        .formula {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+        .connection-box {
+            background: rgba(0, 119, 190, 0.08);
+            border: 2px solid var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .connection-box h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .simulator-mini {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .simulator-mini input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .simulator-mini button {
+            width: 100%;
+            padding: 12px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .result-display {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>☀️ Óptica Solar: Da Luz ao Calor 💧</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="ciencia.html" aria-current="page">Ciência da Luz</a></li>
+                <li><a href="radiacao.html">Radiação e Calor</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>🌟 A Ciência da Luz</h2>
+        <p>Descubra como a luz branca se revela em um espetáculo de cores ao atravessar diferentes meios. A física por trás dos prismas, arco-íris e da própria visão humana.</p>
+
+        <section class="science-section">
+            <h2>1. O Que é a Luz?</h2>
+            <h3>1.1 A Natureza Dual da Luz</h3>
+            <p>A luz é uma das formas mais fascinantes de energia que conhecemos. Durante séculos, físicos brilhantes debateram sua verdadeira natureza: seria ela uma <strong>onda</strong> ou um conjunto de <strong>partículas</strong>?</p>
+            <p>A resposta moderna, consolidada no século XX com a <strong>Mecânica Quântica</strong>, é que a luz possui <strong>natureza dual</strong>: ela se comporta como onda em alguns fenômenos (como a difração e a interferência) e como partícula em outros (como o efeito fotoelétrico).</p>
+            <ul>
+                <li><strong>Como onda:</strong> A luz é uma <strong>onda eletromagnética</strong> — uma oscilação conjunta de campos elétricos e magnéticos que se propaga pelo espaço.</li>
+                <li><strong>Como partícula:</strong> A luz é composta por <strong>fótons</strong>, pacotes discretos de energia sem massa, cuja energia depende da frequência da onda (E=h⋅f).</li>
+            </ul>
+            <p>Para entender a dispersão da luz, focaremos principalmente em seu comportamento <strong>ondulatório</strong>.</p>
+        </section>
+
+        <section class="science-section">
+            <h2>2. O Espectro Eletromagnético</h2>
+            <p>A luz que nossos olhos conseguem detectar é apenas uma pequena faixa do vasto <strong>espectro eletromagnético</strong>. Cada tipo de luz é caracterizado por seu <strong>comprimento de onda</strong> (λ) e sua <strong>frequência</strong> (f), relacionadas pela equação:</p>
+            <div class="formula">c = λ ⋅ f</div>
+            <p>Onde c ≈ 3×10⁸ m/s é a velocidade da luz no vácuo.</p>
+            <p><strong>A luz visível ocupa a faixa de aproximadamente 380 nm a 750 nm:</strong></p>
+            
+            <table class="spectrum-table" aria-label="Tabela do espectro visível">
+                <thead>
+                    <tr>
+                        <th>Cor</th>
+                        <th>Comprimento de Onda (nm)</th>
+                        <th>Frequência (THz)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #ff0000;"></span>Vermelho</td>
+                        <td>620 – 750</td>
+                        <td>400 – 480</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #ff7f00;"></span>Laranja</td>
+                        <td>590 – 620</td>
+                        <td>480 – 510</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #ffff00;"></span>Amarelo</td>
+                        <td>570 – 590</td>
+                        <td>510 – 526</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #00ff00;"></span>Verde</td>
+                        <td>495 – 570</td>
+                        <td>526 – 606</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #0000ff;"></span>Azul</td>
+                        <td>450 – 495</td>
+                        <td>606 – 666</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #4b0082;"></span>Anil</td>
+                        <td>420 – 450</td>
+                        <td>666 – 714</td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-indicator" style="background: #8b00ff;"></span>Violeta</td>
+                        <td>380 – 420</td>
+                        <td>714 – 790</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Lembre-se:</strong> A luz branca que vemos no Sol ou em lâmpadas comuns é, na verdade, a <strong>mistura de todas essas cores</strong> simultaneamente.</p>
+        </section>
+
+        <section class="science-section">
+            <h2>3. O Fenômeno da Refração</h2>
+            <h3>3.1 O Que é Refração?</h3>
+            <p><strong>Refração</strong> é o fenômeno óptico no qual a luz <strong>muda de velocidade e de direção</strong> ao passar de um meio transparente para outro com propriedades diferentes (por exemplo, do ar para a água, ou do ar para o vidro).</p>
+            <p>Imagine que você está empurrando um carrinho de supermercado em um piso liso (asfalto) e, de repente, uma das rodas entra na areia. A roda na areia fica mais lenta, fazendo o carrinho <strong>mudar de direção</strong>. É exatamente isso que acontece com a luz ao mudar de meio!</p>
+
+            <h3>3.2 O Índice de Refração (n)</h3>
+            <p>Cada material possui uma "resistência" à passagem da luz, medida pelo <strong>índice de refração absoluto</strong> (n). Ele é definido como a razão entre a velocidade da luz no vácuo (c) e a velocidade da luz no material (v):</p>
+            <div class="formula">n = c / v</div>
+            <p>Como a luz sempre viaja mais devagar em qualquer meio material do que no vácuo, <strong>o índice de refração é sempre maior ou igual a 1</strong>.</p>
+
+            <h3>3.3 A Lei de Snell-Descartes</h3>
+            <p>A relação matemática que rege a refração foi descoberta independentemente por <strong>Willebrord Snell</strong> (1621) e formalizada por <strong>René Descartes</strong> (1637). Ela é conhecida como <strong>Lei de Snell-Descartes</strong>:</p>
+            <div class="formula">n₁ ⋅ sin(θ₁) = n₂ ⋅ sin(θ₂)</div>
+            <p>Onde:</p>
+            <ul>
+                <li>n₁ = índice de refração do meio de origem</li>
+                <li>n₂ = índice de refração do meio de destino</li>
+                <li>θ₁ = ângulo de incidência (medido em relação à <strong>normal</strong>, a linha perpendicular à superfície)</li>
+                <li>θ₂ = ângulo de refração</li>
+            </ul>
+            <p><strong>Regras práticas:</strong></p>
+            <ul>
+                <li>Se a luz passa de um meio <strong>menos refringente</strong> para um <strong>mais refringente</strong> (n₂ > n₁), o raio se <strong>aproxima da normal</strong> (θ₂ < θ₁).</li>
+                <li>Se passa de um meio <strong>mais refringente</strong> para um <strong>menos refringente</strong> (n₂ < n₁), o raio se <strong>afasta da normal</strong> (θ₂ > θ₁).</li>
+            </ul>
+        </section>
+
+        <section class="science-section">
+            <h2>4. A Dispersão da Luz</h2>
+            <h3>4.1 O Que é Dispersão?</h3>
+            <p><strong>Dispersão da luz</strong> é o fenômeno no qual a <strong>luz policromática</strong> (composta por várias cores, como a luz branca) se <strong>separa em suas cores componentes
