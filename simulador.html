@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Interativo | Óptica Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>☀️ Óptica Solar: Da Luz ao Calor 💧</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="ciencia.html">Ciência da Luz</a></li>
+                <li><a href="radiacao.html">Radiação e Calor</a></li>
+                <li><a href="simulador.html" aria-current="page">Simulador</a></li>
+                <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>🎮 Simulador de Eficiência Óptica da Piscina</h2>
+        <p>Altere as variáveis abaixo para ver como a física impacta o aquecimento da água e a economia de energia.</p>
+
+        <div class="simulator-box">
+            <label for="corSuperficie">Cor da Superfície da Piscina:</label>
+            <select id="corSuperficie">
+                <option value="preta">Preta (Alta Absorção)</option>
+                <option value="azul">Azul (Média Absorção)</option>
+                <option value="branca">Branca (Alta Reflexão)</option>
+            </select>
+
+            <label for="cobertura">Tipo de Cobertura:</label>
+            <select id="cobertura">
+                <option value="nenhuma">Nenhuma (Perda por evaporação)</option>
+                <option value="transparente">Transparente (Efeito Estufa + Barreira)</option>
+            </select>
+
+            <button onclick="calcularRadiacao()" aria-label="Calcular distribuição de energia e ganho de temperatura">Calcular Distribuição de Energia</button>
+
+            <div id="resultados" style="display: none;" aria-live="polite">
+                <p><strong>Absorção (Calor gerado):</strong> <span id="valAbs"></span>%</p>
+                <div class="result-bar" id="barAbs" style="width: 0%; background-color: #d32f2f;">0%</div>
+                
+                <p><strong>Reflexão (Energia perdida):</strong> <span id="valRef"></span>%</p>
+                <div class="result-bar" id="barRef" style="width: 0%; background-color: #fbc02d;">0%</div>
+                
+                <p style="margin-top: 20px; font-size: 1.1rem;">🌡️ Ganho Estimado de Temperatura: <strong id="ganhoTemp" style="color: var(--secondary-color); font-size: 1.4rem;"></strong> °C/dia</p>
+                
+                <div style="background: rgba(0,255,0,0.1); padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid green;">
+                    <strong>💡 Inovação e Impacto:</strong> Com essa configuração, um sistema de automação com sensor óptico fecharia a cobertura automaticamente ao detectar sol, maximizando esse ganho e evitando a perda noturna de calor, economizando até 300 kg de CO₂/mês em comparação a aquecedores elétricos.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="accessibility-panel" role="region" aria-label="Ferramentas de Acessibilidade">
+        <button onclick="toggleContrast()">👁️ Contraste</button>
+        <button onclick="toggleDyslexia()">🔤 Dislexia</button>
+        <button onclick="changeFontSize(1)">A+</button>
+        <button onclick="changeFontSize(-1)">A-</button>
+    </div>
+
+    <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="script.js"></script>
+</body>
+</html>
