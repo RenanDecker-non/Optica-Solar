@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade e Mapa do Site | Óptica Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resource-card {
+            background: rgba(0, 119, 190, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .site-map {
+            background: rgba(255, 140, 0, 0.05);
+            border: 2px solid var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .site-map ul {
+            list-style: none;
+            padding: 0;
+        }
+        .site-map li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .site-map li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .site-map a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .site-map a:hover, .site-map a:focus {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+        .credits-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(0, 119, 190, 0.03);
+            border-radius: 10px;
+        }
+        .credits-section a {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>☀️ Óptica Solar: Da Luz ao Calor 💧</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="ciencia.html">Ciência da Luz</a></li>
+                <li><a href="radiacao.html">Radiação e Calor</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>♿ Acessibilidade e Inclusão Digital</h2>
+        <p>Este site foi desenvolvido com compromisso total em tornar o conteúdo científico acessível a todas as pessoas, independentemente de suas habilidades ou limitações. Todos os recursos abaixo estão disponíveis em todas as páginas do site.</p>
+
+        <div class="resource-card">
+            <h3>👁️ Alto Contraste</h3>
+            <p><strong>Para quem é útil:</strong> Pessoas com baixa visão, fotofobia ou dificuldades de leitura em condições normais de iluminação.</p>
+            <p><strong>Como usar:</strong> Clique no botão "👁️ Contraste" no painel flutuante no canto inferior esquerdo da tela. O fundo se tornará preto e o texto amarelo/branco, maximizando a legibilidade.</p>
+            <p><strong>Como funciona:</strong> O modo altera as variáveis CSS do site, invertendo completamente a paleta de cores sem perder a identidade visual.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🔤 Fonte para Dislexia</h3>
+            <p><strong>Para quem é útil:</strong> Pessoas com dislexia ou outras dificuldades de processamento visual de texto.</p>
+            <p><strong>Como usar:</strong> Clique no botão "🔤 Dislexia" no painel de acessibilidade. O site alternará para uma fonte com letras assimétricas e espaçamento aumentado.</p>
+            <p><strong>Como funciona:</strong> A fonte OpenDyslexic (ou Comic Sans MS como fallback) possui design específico para reduzir a confusão visual entre letras similares (como b/d, p/q).</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🔍 Ajuste de Tamanho da Fonte</h3>
+            <p><strong>Para quem é útil:</strong> Pessoas com baixa visão ou que preferem texto maior para leitura confortável.</p>
+            <p><strong>Como usar:</strong> Use os botões "A+" e "A-" no painel de acessibilidade para aumentar ou diminuir o tamanho do texto em incrementos de 10%.</p>
+            <p><strong>Limite:</strong> O tamanho pode variar de 80% a 150% do tamanho original.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🖱️ Navegação 100% por Teclado</h3>
+            <p><strong>Para quem é útil:</strong> Pessoas com limitações motoras que não conseguem usar mouse, ou usuários avançados que preferem teclado.</p>
+            <p><strong>Como usar:</strong></p>
+            <ul>
+                <li><strong>Tab:</strong> Avança para o próximo elemento interativo (links, botões, campos de formulário).</li>
+                <li><strong>Shift + Tab:</strong> Volta para o elemento anterior.</li>
+                <li><strong>Enter ou Espaço:</strong> Ativa o elemento selecionado (clica em botões, abre menus).</li>
+                <li><strong>Setas:</strong> Navegam entre opções em menus e campos de seleção.</li>
+            </ul>
+            <p><strong>Indicador visual:</strong> Quando um elemento está selecionado via teclado, ele é destacado com uma borda colorida (laranja) para você saber onde está.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🤟 VLibras (Tradução para Libras)</h3>
+            <p><strong>Para quem é útil:</strong> Pessoas surdas ou com deficiência auditiva que se comunicam em Língua Brasileira de Sinais (Libras).</p>
+            <p><strong>Como usar:</strong> No canto inferior direito da tela, há um ícone azul do VLibras. Clique nele para abrir o avatar virtual que traduz o conteúdo do site para Libras em tempo real.</p>
+            <p><strong>Como funciona:</strong> O widget oficial do governo federal (vlibras.gov.br) foi integrado ao site e está disponível em todas as páginas.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>📱 Design Responsivo (Mobile-First)</h3>
+            <p><strong>Para quem é útil:</strong> Todas as pessoas, especialmente quem acessa o site por celular ou tablet.</p>
+            <p><strong>Como funciona:</strong> O layout se adapta automaticamente ao tamanho da tela. Em celulares, o menu se reorganiza em coluna única, os botões ficam maiores para toque fácil e o texto se ajusta para leitura confortável sem necessidade de zoom.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🎯 Estrutura Semântica e ARIA</h3>
+            <p><strong>Para quem é útil:</strong> Usuários de leitores de tela (como NVDA, VoiceOver ou JAWS) devido a deficiência visual.</p>
+            <p><strong>Como funciona:</strong> O site usa HTML semântico (tags como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>) e atributos ARIA (<code>aria-label</code>, <code>aria-current</code>, <code>aria-live</code>) para que leitores de tela possam navegar e entender a estrutura do site corretamente.</p>
+            <p><strong>Exemplo:</strong> Todas as imagens possuem texto alternativo descritivo (<code>alt</code>) e todos os botões têm rótulos claros para leitores de tela.</p>
+        </div>
+
+        <div class="site-map">
+            <h2>🗺️ Mapa do Site</h2>
+            <p>Navegue por todas as páginas do projeto:</p>
+            <ul>
+                <li><a href="index.html">Página Inicial</a> - Apresentação do projeto integrador e visão geral</li>
+                <li><a href="ciencia.html">Ciência da Luz</a> - Fundamentos sobre dispersão, refração e o espectro eletromagnético</li>
+                <li><a href="radiacao.html">Radiação e Calor</a> - Absorção, reflexão e transmissão da radiação solar (conteúdo novo)</li>
+                <li><a href="simulador.html">Simulador Interativo</a> - Teste como diferentes configurações afetam o aquecimento da piscina</li>
+                <li><a href="acessibilidade.html">Acessibilidade</a> - Esta página (recursos de inclusão e mapa do site)</li>
+            </ul>
+        </div>
+
+        <div class="credits-section">
+            <h2>📚 Créditos e Projetos Anteriores</h2>
+            <p>Este site é o resultado da integração de três projetos desenvolvidos ao longo do curso, demonstrando a evolução do aprendizado e a capacidade de conectar diferentes áreas do conhecimento:</p>
+            
+            <h3>Projetos Originais:</h3>
+            <ul>
+                <li><strong>1. Aquecimento Solar de Piscina com Óptica Aplicada</strong><br>
+                <a href="https://renandecker-non.github.io/Aquecimento-Solar-de-Piscina-com-ptica-Aplicada/index.html" target="_blank" rel="noopener noreferrer">Acessar o projeto original →</a><br>
+                <em>Foco: Automação, sustentabilidade e aplicação prática de conceitos ópticos para aquecimento eficiente.</em></li>
+                
+                <li><strong>2. A Dispersão da Luz por Refração</strong><br>
+                <a href="https://renandecker-non.github.io/A-Dispers-o-da-Luz-por-refra-o/" target="_blank" rel="noopener noreferrer">Acessar o projeto original →</a><br>
+                <em>Foco: Fundamentos da óptica, Lei de Snell, espectro visível e fenômenos como arco-íris e prismas.</em></li>
+                
+                <li><strong>3. Óptica Solar: Da Luz ao Calor (Este Site)</strong><br>
+                <em>Foco: Integração dos dois projetos anteriores com novo conteúdo sobre interação da radiação solar com materiais (absorção, reflexão e transmissão), criando uma solução completa e acessível.</em></li>
+            </ul>
+
+            <h3>Desenvolvido por:</h3>
+            <p><strong>Renan Decker Non</strong><br>
+            Projeto Integrador - Aplicação de conceitos de Física, Óptica e Desenvolvimento Web com foco em acessibilidade e impacto social.</p>
+
+            <h3>Tecnologias Utilizadas:</h3>
+            <ul>
+                <li>HTML5 semântico</li>
+                <li>CSS3 (variáveis CSS, Flexbox, Grid, media queries)</li>
+                <li>JavaScript vanilla (interatividade e ferramentas de acessibilidade)</li>
+                <li>VLibras (widget oficial do governo federal para tradução em Libras)</li>
+                <li>GitHub Pages (hospedagem)</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: rgba(0, 119, 190, 0.05); border-radius: 10px; text-align: center;">
+            <h2>💬 Dúvidas ou Sugestões?</h2>
+            <p>Se você encontrou algum problema de acessibilidade ou tem sugestões para melhorar o site, entre em contato. A inclusão digital é um processo contínuo e seu feedback é muito importante!</p>
+            <p style="margin-top: 1.5rem;">
+                <a href="index.html" style="background: var(--primary-color); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">← Voltar ao Início</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Óptica Solar: Da Luz ao Calor | Projeto Integrador de Física e Sustentabilidade</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Desenvolvido com compromisso de acessibilidade e inclusão digital</p>
+    </footer>
+
+    <!-- Painel de Acessibilidade -->
+    <div class="accessibility-panel" role="region" aria-label="Ferramentas de Acessibilidade">
+        <button onclick="toggleContrast()" aria-label="Alternar alto contraste">👁️ Contraste</button>
+        <button onclick="toggleDyslexia()" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
+        <button onclick="changeFontSize(1)" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button onclick="changeFontSize(-1)" aria-label="Diminuir tamanho da fonte">A-</button>
+    </div>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <!-- Script de funcionalidades -->
+    <script src="script.js"></script>
+</body>
+</html>
