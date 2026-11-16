@@ -1,0 +1,42 @@
+
+        <h3 class="subsection-title">6.2 O CD como Rede de Difração</h3>
+        <p>A superfície de um CD ou DVD possui microscópicas trilhas espirais que funcionam como uma <strong>rede de difração</strong>. Ao refletir luz branca, elas separam as cores de forma ainda mais nítida que um prisma — e é por isso que a parte de baixo de um CD brilha com todas as cores do arco-íris!</p>
+    </section>
+
+    <!-- CALCULADORA INTERATIVA -->
+    <section class="container" id="calculadora">
+        <div class="calculator">
+            <h2 class="section-title" style="border: none; padding: 0; margin-bottom: 1.5rem;">🧮 Simulador da Lei de Snell</h2>
+            <p style="margin-bottom: 2rem; color: #aaa;">Insira os valores abaixo para calcular o ângulo de refração de um raio de luz.</p>
+            
+            <div class="input-group">
+                <label for="n1">Índice de Refração do Meio 1 (ex: Ar = 1.0)</label>
+                <input type="number" id="n1" value="1.0" step="0.01" min="1">
+            </div>
+            <div class="input-group">
+                <label for="n2">Índice de Refração do Meio 2 (ex: Vidro = 1.5)</label>
+                <input type="number" id="n2" value="1.5" step="0.01" min="1">
+            </div>
+            <div class="input-group">
+                <label for="angle1">Ângulo de Incidência (em graus)</label>
+                <input type="number" id="angle1" value="45" step="1" min="0" max="89">
+            </div>
+
+            <button class="btn-calc" onclick="calcularRefrao()">Calcular Desvio da Luz</button>
+
+            <div class="result-box" id="resultado"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Projeto Educacional de Física tecnociência | Óptica e interação da radiação com materiais &copy; 2026</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Feito com ❤️ e <a href="https://pages.github.com/" target="_blank" style="color: var(--accent);">GitHub Pages</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
