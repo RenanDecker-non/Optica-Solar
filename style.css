@@ -80,15 +80,6 @@ main {
     box-sizing: border-box;
 }
 
-.accessibility-panel button {
-    padding: 8px;
-    cursor: pointer;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    background: white;
-    color: black;
-    font-weight: bold;
-}
 
 /* Simulador (Critério 4) */
 .simulator-box {
